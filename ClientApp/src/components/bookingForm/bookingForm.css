@@ -1,0 +1,111 @@
+.booking {
+  display: flex;
+  flex-direction: column;
+}
+.bContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bCalendar {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.bInfor {
+  flex: 3;
+  margin-left: 10px;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.inputWrap input {
+  padding: 10px;
+}
+
+.selectRoom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+  width: 100%;
+}
+
+.roomItems {
+  width: 100%;
+}
+.roomItem {
+  float: left;
+  width: 45%;
+  display: flex;
+  padding-bottom: 20px;
+  padding-right: 4%;
+  /* justify-content: space-between; */
+}
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 60px;
+}
+.roomTitle {
+  font-weight: 500;
+}
+.roomDesc {
+  font-weight: 300;
+}
+.roomMax {
+  font-size: 12px;
+}
+.roomPrice {
+  font-weight: 500;
+}
+
+.selectRooms {
+  display: flex;
+  gap: 5px;
+  font-size: 8px;
+  color: gray;
+  align-items: center;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.paymentDetail {
+  display: flex;
+  gap: 100px;
+}
+
+.paymentMethod select {
+  padding: 10px;
+  width: 300px;
+  background-color: #efefef;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.paymentDetail button {
+  padding: 10px 60px;
+  background-color: #0071c2;
+  color: #efefef;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
