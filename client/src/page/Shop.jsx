@@ -21,6 +21,7 @@ const Shop = () => {
   ]);
 
   const { data } = useFetch("/product");
+  console.log(data);
   const [products, setProducts] = useState([]);
 
   const [filter, setFilter] = useState("all");
