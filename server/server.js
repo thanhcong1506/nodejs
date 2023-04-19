@@ -49,13 +49,10 @@ app.use(function (req, res, next) {
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://thanhcongecommerce.netlify.app/",
-    ],
-    methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
-    credentials: true,
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
   })
 );
 
