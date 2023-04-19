@@ -25,10 +25,10 @@ app.use(function (req, res, next) {
   //   "Origin, X-Requested-With, Content-Type, Accept"
   // );
   // next();
-  res.header("Access-Control-Allow-Origin", [
-    "http://localhost:3000",
-    "https://thanhcongecommerce.netlify.app",
-  ]);
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://thanhcongadmin.netlify.app/"
+  );
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
