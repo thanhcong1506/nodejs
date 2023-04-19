@@ -25,22 +25,31 @@ app.use(function (req, res, next) {
   //   "Origin, X-Requested-With, Content-Type, Accept"
   // );
   // next();
-
-  const allowedOrigins = [
+  res.header("Access-Control-Allow-Origin", [
     "http://localhost:3000",
-    "https://thanhcongecommerce.netlify.app/",
-  ];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
+    "https://thanhcongecommerce.netlify.app",
+  ]);
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
-  res.header("Access-Control-Allow-credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
   next();
+
+  // const allowedOrigins = [
+  //   "http://localhost:3000",
+  //   "https://thanhcongecommerce.netlify.app/",
+  // ];
+  // const origin = req.headers.origin;
+  // if (allowedOrigins.includes(origin)) {
+  //   res.setHeader("Access-Control-Allow-Origin", origin);
+  // }
+  // res.header(
+  //   "Access-Control-Allow-Headers",
+  //   "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  // );
+  // res.header("Access-Control-Allow-credentials", true);
+  // res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+  // next();
 });
 
 app.use(
