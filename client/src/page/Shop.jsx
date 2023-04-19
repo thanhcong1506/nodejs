@@ -20,7 +20,7 @@ const Shop = () => {
     },
   ]);
 
-  const { data } = useFetch("/api/product");
+  const { data } = useFetch("/product");
   const [products, setProducts] = useState([]);
 
   const [filter, setFilter] = useState("all");
