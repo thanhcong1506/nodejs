@@ -9,8 +9,6 @@ import product5 from "../images/product_5.png";
 import Popup from "../components/Popup/Popup";
 import newRequest from "../utils/newRequest";
 
-// const url =
-//   "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74";
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
