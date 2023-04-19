@@ -20,7 +20,7 @@ const Shop = () => {
     },
   ]);
 
-  const { data } = useFetch("https://ecommerce-utm9.onrender.com/api/product");
+  const { data } = useFetch("/api/product");
   const [products, setProducts] = useState([]);
 
   const [filter, setFilter] = useState("all");
