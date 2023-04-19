@@ -17,7 +17,7 @@ const Detail = (item) => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   const { data, loading, error } = useFetch(
-    `http://localhost:5000/api/product/${id}`
+    `https://ecommerce-utm9.onrender.com/api/product/${id}`
   );
 
   //Lấy tất cả sản phẩm
