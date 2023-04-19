@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: "",
+  baseURL: "https://ecommerce-utm9.onrender.com/api/",
   withCredentials: true,
 });
 
