@@ -57,7 +57,6 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://ecommerce-utm9.onrender.com",
       "https://thanhcongecommerce.netlify.app/",
     ],
     methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
