@@ -5,7 +5,9 @@ import newRequest from "../utils/newRequest";
 import useFetch from "../hooks/useFetch";
 
 const DataGridUser = () => {
-  const { data } = useFetch("https://ecommerce-utm9.onrender.com/api/user");
+  const { data } = useFetch(
+    "https://ecommerce-admin-a67s.onrender.com/api/user"
+  );
   const [user, setUser] = useState();
 
   useEffect(() => {
