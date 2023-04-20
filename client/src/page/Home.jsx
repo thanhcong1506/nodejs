@@ -8,6 +8,7 @@ import product4 from "../images/product_4.png";
 import product5 from "../images/product_5.png";
 import Popup from "../components/Popup/Popup";
 import newRequest from "../utils/newRequest";
+import axios from "axios";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -25,7 +26,12 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await newRequest.get("/product");
+      const res = await axios.get(
+        "https://ecommerce-utm9.onrender.com/api/product"
+        // {
+        //   withCredentials: true,
+        // }
+      );
       const data = res.data.products;
       setProducts(data.splice(0, 8));
     };
