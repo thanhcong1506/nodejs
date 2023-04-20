@@ -9,6 +9,7 @@ import userRoute from "./routes/user.js";
 import categoryRoute from "./routes/category.js";
 import productRoute from "./routes/product.js";
 import orderRoute from "./routes/order.js";
+import { corsOptions } from "./config/corsOptions.js";
 
 //configure env
 dotenv.config();
@@ -55,23 +56,22 @@ const app = express();
 //     optionsSuccessStatus: 204,
 //   })
 // );
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-
+// app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//   res.header("Access-Control-Allow-Credentials", true);
+//   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
+//   );
+//   next();
+// });
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
-// app.use(
-//   cors({
-//     origin: "*",
-//   })
-// );
+
 //routes
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
