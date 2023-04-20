@@ -21,7 +21,6 @@ const Shop = () => {
   ]);
 
   const { data } = useFetch("https://ecommerce-utm9.onrender.com/api/product");
-  console.log(data);
   const [products, setProducts] = useState([]);
 
   const [filter, setFilter] = useState("all");

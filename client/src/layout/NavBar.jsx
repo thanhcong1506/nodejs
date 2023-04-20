@@ -53,13 +53,14 @@ function NavBar() {
                   <p>Cart</p>
                 </div>
               </Nav.Link>
-              <Nav.Link>
+              <div>
                 <FaUser className="pe-1 h5 pt-1" />
 
                 {currentUser ? (
                   <>
                     <span className=" pe-2">{currentUser.name}</span>
                     <span
+                      style={{ cursor: "pointer" }}
                       className=" text-success fw-bold"
                       onClick={() => handleLogout()}
                     >
@@ -74,7 +75,7 @@ function NavBar() {
                     Login
                   </Link>
                 )}
-              </Nav.Link>
+              </div>
             </Col>
           </Navbar.Collapse>
         </Container>
