@@ -19,54 +19,6 @@ const app = express();
 
 //middelwares
 
-// app.use(function (req, res, next) {
-//   res.header(
-//     "Access-Control-Allow-Origin",
-//     "https://thanhcongecommerce.netlify.app/"
-//   );
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-
-//   // const allowedOrigins = [
-//   //   "http://localhost:3000",
-//   //   "https://thanhcongecommerce.netlify.app/",
-//   //   "https://thanhcongadmin.netlify.app/",
-//   // ];
-//   // const origin = req.headers.origin;
-//   // if (allowedOrigins.includes(origin)) {
-//   //   res.setHeader("Access-Control-Allow-Origin", origin);
-//   // }
-//   // res.header(
-//   //   "Access-Control-Allow-Headers",
-//   //   "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-//   // );
-//   // res.header("Access-Control-Allow-credentials", true);
-//   // res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
-//   // next();
-// });
-
-// app.use(
-//   cors({
-//     origin: "*",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     preflightContinue: false,
-//     optionsSuccessStatus: 204,
-//   })
-// );
-// app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-//   res.header("Access-Control-Allow-Credentials", true);
-//   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
-//   );
-//   next();
-// });
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
