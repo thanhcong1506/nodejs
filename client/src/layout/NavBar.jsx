@@ -7,6 +7,7 @@ import { FaUser, FaShoppingCart } from "react-icons/fa";
 import { Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import newRequest from "../utils/newRequest";
+import removeCookie from "../utils/removeCookie";
 
 function NavBar() {
   const amount = useSelector((state) => state.cart.cartItems.length);
@@ -18,6 +19,7 @@ function NavBar() {
     try {
       await newRequest.post("/auth/logout");
       localStorage.removeItem("currentUser");
+      // removeCookie("accessToken");
       navigate("/");
     } catch (error) {
       console.log(error);

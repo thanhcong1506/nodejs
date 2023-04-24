@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../utils/newRequest";
 import { toast } from "react-toastify";
+import removeCookie from "../utils/removeCookie";
+import setCookie from "../utils/setCookie";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,7 +23,11 @@ const Login = () => {
         email,
         password,
       });
+
       localStorage.setItem("currentUser", JSON.stringify(res.data));
+      // removeCookie("accessToken");
+      // const accessToken = JSON.parse(localStorage.getItem("currentUser")).token;
+      // setCookie("accessToken", accessToken);
       if (location.state) {
         navigate(location.state);
       } else {

@@ -12,8 +12,9 @@ const Checkout = () => {
   const cart = useSelector((state) => state.cart.cartItems);
   const dispath = useDispatch();
   // console.log(cart);
-  const cartItem = cart.map((item) => {
+  const cartItem = cart.map((item, i) => {
     return {
+      key: i,
       name: item.name,
       quantity: item.quantity,
       image: item.images[0],

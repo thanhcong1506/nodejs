@@ -10,6 +10,7 @@ import categoryRoute from "./routes/category.js";
 import productRoute from "./routes/product.js";
 import orderRoute from "./routes/order.js";
 import { corsOptions } from "./config/corsOptions.js";
+import Cookies from "js-cookie";
 
 //configure env
 dotenv.config();
@@ -34,6 +35,10 @@ app.use("/api/order", orderRoute);
 //rest api
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
+});
+app.get("/gettoken", (req, res) => {
+  const token = Cookies.get("accessToken");
+  res.send(token);
 });
 
 //err
