@@ -19,7 +19,7 @@ function NavBar() {
     try {
       await newRequest.post("/auth/logout");
       localStorage.removeItem("currentUser");
-      // removeCookie("accessToken");
+      removeCookie("accessToken");
       navigate("/");
     } catch (error) {
       console.log(error);
