@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductList from "../components/ProductList";
 import Search from "../components/Search";
 import SortProduct from "../components/SortProduct";
-import useFetch from "../utils/usFfetch";
+import useFetch from "../utils/usFetch";
 
 const Shop = () => {
   const [category, setCategory] = useState([

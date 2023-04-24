@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ProductList from "../components/ProductList";
 import { addToCart } from "../redux/cartSlice";
 import newRequest from "../utils/newRequest";
-import useFetch from "../utils/usFfetch";
+import useFetch from "../utils/usFetch";
 import { toast } from "react-toastify";
 
 const Detail = (item) => {
