@@ -36,10 +36,6 @@ app.use("/api/order", orderRoute);
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
 });
-app.get("/gettoken", (req, res) => {
-  const token = Cookies.get("accessToken");
-  res.send(token);
-});
 
 //err
 app.use((err, req, res, next) => {
