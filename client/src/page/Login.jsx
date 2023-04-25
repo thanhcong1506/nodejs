@@ -25,7 +25,6 @@ const Login = () => {
       });
 
       localStorage.setItem("currentUser", JSON.stringify(res.data));
-      removeCookie("accessToken");
       const accessToken = JSON.parse(localStorage.getItem("currentUser")).token;
       setCookie("accessToken", accessToken);
       if (location.state) {
