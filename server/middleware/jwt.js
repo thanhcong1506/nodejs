@@ -4,8 +4,7 @@ import Cookies from "js-cookie";
 
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.accessToken;
-  // const token = Cookies.get("accessToken");
-  console.log(token);
+
   if (!token) return next(createError(401, "You are not authenticated!"));
 
   jwt.verify(token, process.env.JWT_SECRET, async (err, payload) => {

@@ -27,6 +27,7 @@ const Login = () => {
       localStorage.setItem("currentUser", JSON.stringify(res.data));
       // const accessToken = JSON.parse(localStorage.getItem("currentUser")).token;
       // setCookie("accessToken", accessToken);
+
       if (location.state) {
         navigate(location.state);
       } else {
